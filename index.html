@@ -75,35 +75,34 @@
         </div>
         <p>Se algum desses pontos fizer sentido pra você, este é o GUIA mais importante para ter nesse exato momento.</p>
     </div>
-    <div class="carrosel" data-anime="up">
-        <h2>Como é o E-book por dentro.</h2>
-        <p>Material prático com vários exercícios</p>
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="img/carrosel1.png"></div>
-                <div class="swiper-slide"><img src="img/carrosel2.png"></div>
-                <div class="swiper-slide"><img src="img/carrosel3.png"></div>
-                <div class="swiper-slide"><img src="img/carrosel4.png"></div>
+         <div class="slider" data-anime="up">
+            <h2>Como é o E-book por dentro.</h2>
+            <p>Material prático com vários exercícios</p>
+            <div class="slider--controls">
+                <div class="slider--control" onclick="goPrev()">&lsaquo;</div>
+                <div class="slider--control" onclick="goNext()">&rsaquo;</div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="slider--width">
+                <div class="slider--item" style="background-image: url(img/carrosel1.png);"></div>
+                <div class="slider--item" style="background-image: url(img/carrosel2.png);"></div>
+                <div class="slider--item" style="background-image: url(img/carrosel3.png);"></div>
+                <div class="slider--item" style="background-image: url(img/carrosel4.png);"></div>
+            </div>
         </div>
     </div>
-        <h2 id="escolha" data-anime="up">Escolha a sua versão</h2>
+        <h2 id="compre" data-anime="up">Compre seu E-Book</h2>
     <div class="venda" data-anime="up">
-        <div class="fisico">
-            <img src="img/versaoFisica.png" alt="Foto versão física">
-            <button  style="background-color: rgba(197, 68, 68, 0.884);">
-                <a href="https://p.eduzz.com/1622728" target="_blank" style="color: white;">Garantir ebook Físico</a>
-            </button>
-        </div>
-        <div class="digital">
-            <img src="img/versaoDigital.png" alt="Foto versão digital">
-            <button  style="background-color: rgba(197, 68, 68, 0.884);">
-                <a href="https://sun.eduzz.com/1621270" target="_blank" style="color: white;">Garantir ebook Digital</a>
-            </button>
-        </div>
+        <img src="img/carrosel1.png" alt="Foto versão digital">
+       <div>
+        <p>
+            De <s>R$70,00</s><br>
+            <span style="color: bisque;">por 11 X R$5,27</span><br>
+            <span>ou R$49,00 <b  style="color: bisque">á vista</b></span>
+        </p>
+        <button id="button-venda" style="background-color: bisque;">
+            <a href="https://sun.eduzz.com/1621270" target="_blank" style="color: rgba(197, 68, 68, 0.884); font-weight: 600;">Garantir ebook</a>
+        </button>
+       </div>
     </div>
     <footer data-anime="up">
         <div class="rodape">
@@ -126,8 +125,6 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
 
