@@ -1,6 +1,5 @@
 //efeito topo
-var rellax = new Rellax('.rellax')
-
+var rellax = new Rellax(".rellax");
 
 //efeito scroll
 const item = document.querySelectorAll("[data-anime]");
@@ -11,9 +10,7 @@ const animeScroll = () => {
   item.forEach((element) => {
     if (windowTop > element.offsetTop) {
       element.classList.add("animate");
-    } else (
-        element.classList.remove("animate")
-    )
+    } else element.classList.remove("animate");
   });
 };
 
@@ -23,14 +20,14 @@ window.addEventListener("scroll", () => {
   animeScroll();
 });
 
-
 //time
 
 function startTimer(duration, display) {
-  var timer = duration, minutes, seconds;
-  
-  setInterval(function() {
+  var timer = duration,
+    minutes,
+    seconds;
 
+  setInterval(function () {
     minutes = parseInt(timer / 60, 10);
     seconds = parseInt(timer % 60, 10);
 
@@ -38,22 +35,18 @@ function startTimer(duration, display) {
     seconds = seconds < 10 ? "0" + seconds : seconds;
 
     display.textContent = minutes + ":" + seconds;
-    if(--timer < 0) {
+    if (--timer < 0) {
       timer = duration;
     }
-
   }, 1000);
-
 }
 
-window.onload = function() {
+window.onload = function () {
   var duration = 60 * 24; // conversao para segundos
-  var display = document.querySelector("#timer") // elemento para exibir o time
+  var display = document.querySelector("#timer"); // elemento para exibir o time
 
   startTimer(duration, display); //inicia a função
-
-
-}
+};
 
 // carrosel
 
@@ -68,8 +61,7 @@ document.querySelector(".slider--width").style.width = `${
 
 document.querySelector(".slider--controls").style.width = `${sliderWidth}px`;
 document.querySelector(".slider--controls").style.height = `${
-  document.querySelector(".slider").clientHeight
-}px`;
+document.querySelector(".slider").clientHeight}px`;
 
 function goPrev() {
   currentSlide--;
